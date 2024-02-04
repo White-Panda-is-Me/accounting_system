@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(74, 74, 74);
+}
+
+@font-face {
+    font-family: sahel;
+    src: url("../assets/Sahel.ttf");
+}
+
+.box {
+    width: 25px;
+    height: 99%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgb(26, 41, 60);
+    justify-content: start;
+    position: absolute;
+    right: 4px;
+    transition: width 500ms;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.box:hover {
+    width: 180px;
+}
+
+.shit {
+    position: absolute;
+    height: 130px;
+    width: 4px;
+    right: 33px;
+    background-color: white;
+    border-radius: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: right 500ms;
+}
+
+.box:hover + .shit {
+    right: 187px;
+}
+
+.factor {
+    color: rgb(197, 197, 197);
+    font-family: sahel;
+    font-size: large;
+    border-style: none;
+    background-color: unset;
+    position: absolute;
+    height: 40px;
+    width: 280px;
+}
+
+.pish-factor {
+    color: rgb(197, 197, 197);
+    border-style: none;
+    background-color: unset;
+    font-family: sahel;
+    font-size: large;
+    position: absolute;
+    height: 40px;
+    width: 230px;
+    /* top: 0px; */
+    opacity: 0;
+    transition: opacity 200ms, top 200ms;
+}
+
+.arrow {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 60px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(90deg);
+    transition: transform 200ms;
+}
+
+.list-item:hover > .factor > .arrow {
+    transform: translate(0, -55%) rotate(0deg);
+}
+
+.list-item:hover + .pish-factor {
+    opacity: 1;
+    top: 40px;
+}
